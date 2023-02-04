@@ -19,3 +19,6 @@ Context: Amazon Lightsail is a virtual private server (VPS) provider and is the 
 
 ## Lightsail - Start a new Debian EC2 instance
 
+Click on the Create New Instance button
+
+From there, you will click the respectable AZ (Availability Zone) you want to use. For this example, we will use US-East-1 but feel free to pick whichever you want.
