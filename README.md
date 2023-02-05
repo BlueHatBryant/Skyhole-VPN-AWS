@@ -74,7 +74,7 @@ Click the Connect tab and Connect using SSH to the instance.
 
 Once you connect to the instance, we need to update the instance for the newest packages and security updates. 
 
-<code>sudo apt-get update   <br>
-sudo apt-get upgrade -y </code> 
+<code>sudo apt-get update<br>
+sudo apt-get upgrade -y</code> 
 
 Once that finishes, rejoice as you've completed the easiest part of this tutorial.
