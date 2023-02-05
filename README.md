@@ -11,9 +11,9 @@ To begin, we will need a couple of things
 4. 5th Grade reading comprenhension level
 5. More time to troubleshoot.
 
-Once you have created or logined into your aws account.
+Once you have created or logged into your AWS account.
 
-Using the search bar, look up Lightsail, and click on it.
+Using the search bar, look up Lightsail, and click on it. (Should open a new tab in your browser)
 
 Context: Amazon Lightsail is a virtual private server (VPS) provider and is the easiest way to get started with AWS for developers, small businesses, students, and other users who need a solution to build and host their applications on cloud. Lightsail provides developers compute, storage, and networking capacity and capabilities to deploy and manage websites and web applications in the cloud. Lightsail includes everything you need to launch your project quickly – virtual machines, containers, databases, CDN, load balancers, DNS management etc. – for a low, predictable monthly price. <br>
 
