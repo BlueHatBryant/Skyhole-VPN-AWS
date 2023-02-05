@@ -19,6 +19,55 @@ Context: Amazon Lightsail is a virtual private server (VPS) provider and is the 
 
 ## Lightsail - Start a new Debian EC2 instance
 
-Click on the Create New Instance button
+Click on the 'Create Instance' button
 
-From there, you will click the respectable AZ (Availability Zone) you want to use. For this example, we will use US-East-1 but feel free to pick whichever you want.
+From there, you will click the respectable Region and AZ (Availability Zone) you want to use. For this example, we will use US-East-1/Zone A but feel free to pick whichever you want.
+
+As for the Pick your instance image:
+Under Linux/Unix, click 'OS Only' and Debain 11.4 or 10.8.\
+
+Under SSH key, use a new key or existing key you may already have. Be sure to keep this is a safe place, such as a secure and private S3 bucket, or under your mom's bed through an usb. 
+
+If you'd like to have automatic snapshots, you can but I recommend only doing automatic snapshots ONCE everything is running perfectly and you're only coming into the VM for updates, maintence, etc.
+
+Choose your instance plan:
+Personally if it's just you, for 3-4 devices, you can and should be fine with doing the $3.5 a month instance. If you want some headroom, the $5 a month is good for more RAM, storage and transfer. 
+
+If you're going to use this for multiple people/devices exceeding 20-40. Just think if it's going to be concurrent or not and go based on CPU/Memory needs for that needed capacity.
+
+Identify your instance:
+Pick a name, create tags if you want, and create instance.
+
+## Networking Detour
+Go to the Networking tab within AWS Lightsail. (4th tab from left to right)
+
+Sooo the reason we are going to the network tab is... to get a static IP from AWS. This will help to not only ensure our VPN and instance is always assessable from the same external IP, but it just helps avoid headaches.
+
+Click 'create static IP'\
+[If you picked a Region that wasn't us-east-1, for the love of god, change the region to be the same as the static ip] <br>
+
+Give it a name, and create!\
+Important note to read and understand: <br>
+Static IP addresses are free only while attached to an instance. You can manage five at no additional cost. <br>
+
+So if you are going to make more than one Skyholes in different regions around the world... take note, you only get 5 at no cost.
+
+Click Create at the bottom, and now look at the beautiful Public static IP that is now yours.
+
+## Instance Settings
+
+Click the instance once it is finished initiating. \
+There are 6 tabs to take notice: \
+Connect, Metrics, Snapshots, Storage, Networking, and Domains.
+
+Click on Networking.
+
+Attach the Public Static IP to the instance.
+
+Under IPv6 Netowrking, we will be disabling it so click the switch to ensure that IPv6 networking is diabled. This means, that this resource will only communicate using the IPv4 Protocol. Important to take note, but IPv4 > IPv6. \
+
+Under IPv4 Firewall, we can remove port 80 and 443. We can keep Port 22 to SSH into the instance in a bit, and will later add another port for our VPN client to use. \
+
+Click the Connect tab and Connect using SSH to the instance.
+
+## SSH to Instance and Basic Setup
