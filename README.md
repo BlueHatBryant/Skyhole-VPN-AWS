@@ -64,7 +64,7 @@ Click on Networking.
 
 Attach the Public Static IP to the instance.
 
-Under IPv6 Netowrking, we will be disabling it so click the switch to ensure that IPv6 networking is diabled. This means, that this resource will only communicate using the IPv4 Protocol. Important to take note, but IPv4 > IPv6. \
+Under IPv6 Networking, we will be disabling it so click the switch to ensure that IPv6 networking is disabled. This means, that this resource will only communicate using the IPv4 Protocol. Important to take note, but IPv4 > IPv6. \
 
 Under IPv4 Firewall, we can remove port 80 and 443. We can keep Port 22 to SSH into the instance in a bit, and will later add another port for our VPN client to use. \
 
