@@ -44,11 +44,11 @@ Go to the Networking tab within AWS Lightsail. (4th tab from left to right)
 Sooo the reason we are going to the network tab is... to get a static IP from AWS. This will help to not only ensure our VPN and instance is always assessable from the same external IP, but it just helps avoid headaches.
 
 Click 'create static IP'\
-[If you picked a Region that wasn't us-east-1, for the love of god, change the region to be the same as the static ip] <br>
+[If you picked a Region that wasn't us-east-1, for the love of god, change the region to be the same as the static ip]
 
-Give it a name, and create!\
-Important note to read and understand: <br>
-Static IP addresses are free only while attached to an instance. You can manage five at no additional cost. <br>
+Give it a name, and create! \
+Important note to read and understand: \
+Static IP addresses are free only while attached to an instance. You can manage five at no additional cost.
 
 So if you are going to make more than one Skyholes in different regions around the world... take note, you only get 5 at no cost.
 
@@ -71,3 +71,11 @@ Under IPv4 Firewall, we can remove port 80 and 443. We can keep Port 22 to SSH i
 Click the Connect tab and Connect using SSH to the instance.
 
 ## SSH to Instance and Basic Setup
+
+Once you connect to the instance, we need to update the instance for the newest packages and security updates. 
+
+<code>sudo apt-get update && sudo apt-get upgrade</code> \
+Once that finishes, rejoice as you've completed the easiest part of this tutorial.
+
+
+
