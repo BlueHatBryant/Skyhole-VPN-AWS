@@ -64,9 +64,9 @@ Click on Networking.
 
 Attach the Public Static IP to the instance.
 
-Under IPv6 Networking, we will be disabling it so click the switch to ensure that IPv6 networking is disabled. This means, that this resource will only communicate using the IPv4 Protocol. Important to take note, but IPv4 > IPv6. \
+Under IPv6 Networking, we will be disabling it so click the switch to ensure that IPv6 networking is disabled. This means, that this resource will only communicate using the IPv4 Protocol. Important to take note, but IPv4 > IPv6. 
 
-Under IPv4 Firewall, we can remove port 80 and 443. We can keep Port 22 to SSH into the instance in a bit, and will later add another port for our VPN client to use. \
+Under IPv4 Firewall, we can remove port 80 and 443. We can keep Port 22 to SSH into the instance in a bit, and will later add another port for our VPN client to use.
 
 Click the Connect tab and Connect using SSH to the instance.
 
@@ -75,6 +75,14 @@ Click the Connect tab and Connect using SSH to the instance.
 Once you connect to the instance, we need to update the instance for the newest packages and security updates. 
 
 <code>sudo apt-get update</code><br>
-<code>sudo apt-get upgrade -y</code> 
+<code>sudo apt-get upgrade -y</code><br>
+<code>sudo reboot</code><br>
 
-Once that finishes, rejoice as you've completed the easiest part of this tutorial.
+After it finishes rebooting, reconnect to the instance.
+
+Once you reconnect, rejoice as you've completed the easiest part of this tutorial.
+
+## Install PiHole
+
+To install Pihole, we will use this one-step automated install \
+<code>sudo curl -sSL https://install.pi-hole.net | bash </code>
