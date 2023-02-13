@@ -24,14 +24,14 @@ Click on the 'Create Instance' button
 From there, you will click the respectable Region and AZ (Availability Zone) you want to use. For this example, we will use US-East-1/Zone A but feel free to pick whichever you want.
 
 As for the Pick your instance image:
-Under Linux/Unix, click 'OS Only' and Debain 11.4 or 10.8.\
+Under Linux/Unix, click 'OS Only' and Debain 11.4 or 10.8.
 
-Under SSH key, use a new key or existing key you may already have. Be sure to keep this is a safe place, such as a secure and private S3 bucket, or under your mom's bed through an usb. 
+Under SSH key, use a new key or existing key you may already have. Be sure to keep this is a safe place, such as a secure and private S3 bucket, or under your mom's bed through an usb.
 
 If you'd like to have automatic snapshots, you can but I recommend only doing automatic snapshots ONCE everything is running perfectly and you're only coming into the VM for updates, maintence, etc.
 
 Choose your instance plan:
-Personally if it's just you, for 3-4 devices, you can and should be fine with doing the $3.5 a month instance. If you want some headroom, the $5 a month is good for more RAM, storage and transfer. 
+Personally if it's just you, for 3-4 devices, you can and should be fine with doing the $3.5 a month instance. If you want some headroom, the $5 a month is good for more RAM, storage and transfer.
 
 If you're going to use this for multiple people/devices exceeding 20-40. Just think if it's going to be concurrent or not and go based on CPU/Memory needs for that needed capacity.
 
@@ -86,3 +86,30 @@ Once you reconnect, rejoice as you've completed the easiest part of this tutoria
 
 To install Pihole, we will use this one-step automated install \
 <code>sudo curl -sSL https://install.pi-hole.net | bash </code>
+
+We will press enter to "Ok" through a lot of these messages and prompts such as:
+"This installer will transform your device into a network-wide ad blocker!"
+"The Pi-hole is a SERVER so it needs a static IP address to function properly."
+
+It may provide the static IP address we already got and provided the instance, so use that and click enter.
+
+"Select Upstream DNS Provider. To use your own, select Custom"
+As much as we'd like to use Custom, for NOW, we will select whichever, as we will change it later on. I personally use Cloudflare as I trust them FARRR more than Google.
+
+"Pi-hole relies on third party lists in order to block ads." <br>
+[*] Steven Blacok Unfied Host List \
+Just ensure it is marked with the * click "Ok" and move on.
+
+"Select Protocols" Options are IPv4, and IPv6. \
+Ensure that only IPv4 is marked, press Ok, and move on.
+
+Now you should at this point be displayed with your systems default IP, and Gateway. Confirm this, write it down even, and press Yes.
+
+"Installation Complete!" \
+You will be provided your IPv4, the web interface for doing admin tasks such as whitelisting, blacklisting, and updating the pihole to your personal specifications. For the love of all that is good, write down or copy on a notepad file the: <br>
+1. Web interface URL (should be http://pi.hole/admin or http://172.x.x.x/admin) with x being some unique number. \ 
+2. The Admin Webpage login password which will be a random passoword. This will be the password you will use to get into your admin panel later on in this tutorial. You can change it once your inside the admin webpage, but for now as Spongebob said; "Write that down, write that down!"
+
+Once you press enter, the pihole will restart and now you have completed the Pi-hole step of this tutorial!
+
+##PiVPN - OpenVPN/WireGuard
