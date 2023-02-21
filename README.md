@@ -1,5 +1,5 @@
 # Skyhole-VPN-AWS
-Create a Skyhole (PiHole + Cloud + Unbound) VPN (Wireguard/OpenVPN) in the AWS Cloud using Lightsail.=
+Create a Skyhole (PiHole + Cloud + Unbound) VPN (Wireguard/OpenVPN) in the AWS Cloud using Lightsail.
 
 ## Skyhole VPN in the AWS Cloud &#11123;
 
@@ -112,4 +112,4 @@ You will be provided your IPv4, the web interface for doing admin tasks such as 
 
 Once you press enter, the pihole will restart and now you have completed the Pi-hole step of this tutorial!
 
-##PiVPN - OpenVPN/WireGuard
+## PiVPN - OpenVPN/WireGuard
