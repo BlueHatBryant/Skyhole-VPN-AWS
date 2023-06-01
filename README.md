@@ -1,4 +1,4 @@
-# Skyhole-VPN-AWS
+# Skyhole-VPN-AWS - Will hopefully complete this after graduate school!
 Create a Skyhole (PiHole + Cloud + Unbound) VPN (Wireguard/OpenVPN) in the AWS Cloud using Lightsail.
 
 ## Skyhole VPN in the AWS Cloud &#11123;
