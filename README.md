@@ -15,7 +15,7 @@ Once you have created or logged into your AWS account.
 
 Using the search bar, look up Lightsail, and click on it. (Should open a new tab in your browser)
 
-Context: Amazon Lightsail is a virtual private server (VPS) provider and is the easiest way to get started with AWS for developers, small businesses, students, and other users who need a solution to build and host their applications on cloud. Lightsail provides developers compute, storage, and networking capacity and capabilities to deploy and manage websites and web applications in the cloud. Lightsail includes everything you need to launch your project quickly – virtual machines, containers, databases, CDN, load balancers, DNS management etc. – for a low, predictable monthly price. <br>
+Context: Amazon Lightsail is a virtual private server (VPS) provider and is the easiest way to get started with AWS for developers, small businesses, students, and other users who need a solution to build and host their applications on the cloud. Lightsail provides developers compute, storage, and networking capacity and capabilities to deploy and manage websites and web applications in the cloud. Lightsail includes everything you need to launch your project quickly – virtual machines, containers, databases, CDN, load balancers, DNS management, etc. – for a low, predictable monthly price. <br>
 
 ## Lightsail - Start a new Debian EC2 instance
 
@@ -24,24 +24,24 @@ Click on the 'Create Instance' button
 From there, you will click the respectable Region and AZ (Availability Zone) you want to use. For this example, we will use US-East-1/Zone A but feel free to pick whichever you want.
 
 As for the Pick your instance image:
-Under Linux/Unix, click 'OS Only' and Debain 11.4 or 10.8.
+Under Linux/Unix, click 'OS Only' and Debian 11.4 or 10.8.
 
-Under SSH key, use a new key or existing key you may already have. Be sure to keep this is a safe place, such as a secure and private S3 bucket, or under your mom's bed through an usb.
+Under SSH key, use a new key or existing key you may already have. Be sure to keep this is a safe place, such as a secure and private S3 bucket, or under your mom's bed through an USB.
 
-If you'd like to have automatic snapshots, you can but I recommend only doing automatic snapshots ONCE everything is running perfectly and you're only coming into the VM for updates, maintence, etc.
+If you'd like to have automatic snapshots, you can but I recommend only doing automatic snapshots ONCE everything is running perfectly and you're only coming into the VM for updates, maintenance, etc.
 
 Choose your instance plan:
-Personally if it's just you, for 3-4 devices, you can and should be fine with doing the $3.5 a month instance. If you want some headroom, the $5 a month is good for more RAM, storage and transfer.
+Personally, if it's just you, for 3-4 devices, you can and should be fine with doing the $3.5 a month instance. If you want some headroom, the $5 a month is good for more RAM, storage, and transfer.
 
 If you're going to use this for multiple people/devices exceeding 20-40. Just think if it's going to be concurrent or not and go based on CPU/Memory needs for that needed capacity.
 
 Identify your instance:
-Pick a name, create tags if you want, and create instance.
+Pick a name, create tags if you want, and create the instance.
 
 ## Networking Detour
-Go to the Networking tab within AWS Lightsail. (4th tab from left to right)
+Go into the Networking tab within AWS Lightsail. (4th tab from left to right)
 
-Sooo the reason we are going to the network tab is... to get a static IP from AWS. This will help to not only ensure our VPN and instance is always assessable from the same external IP, but it just helps avoid headaches.
+Sooo the reason we are going to the network tab is... to get a static IP from AWS. This will help to not only ensure our VPN and instance is always accessible from the same external IP, but it will also help avoid headaches.
 
 Click 'create static IP'\
 [If you picked a Region that wasn't us-east-1, for the love of god, change the region to be the same as the static ip]
