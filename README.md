@@ -17,14 +17,14 @@ Using the search bar, look up Lightsail, and click on it. (Should open a new tab
 
 Context: Amazon Lightsail is a virtual private server (VPS) provider and is the easiest way to get started with AWS for developers, small businesses, students, and other users who need a solution to build and host their applications on the cloud. Lightsail provides developers compute, storage, and networking capacity and capabilities to deploy and manage websites and web applications in the cloud. Lightsail includes everything you need to launch your project quickly – virtual machines, containers, databases, CDN, load balancers, DNS management, etc. – for a low, predictable monthly price. <br>
 
-## Lightsail - Start a new Debian EC2 instance
+## Lightsail - Start a new Debian-based EC2 instance
 
 Click on the 'Create Instance' button
 
 From there, you will click the respectable Region and AZ (Availability Zone) you want to use. For this example, we will use US-East-1/Zone A but feel free to pick whichever you want.
 
 As for the Pick your instance image:
-Under Linux/Unix, click 'OS Only' and Debian 11.4 or 10.8.
+Under Linux/Unix, click 'OS Only' and select the latest Debian or Ubuntu-based image.
 
 Under SSH key, use a new key or existing key you may already have. Be sure to keep this is a safe place, such as a secure and private S3 bucket, or under your mom's bed through an USB.
 
