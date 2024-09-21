@@ -113,3 +113,20 @@ You will be provided your IPv4, the web interface for doing admin tasks such as 
 Once you press enter, the pihole will restart and now you have completed the Pi-hole step of this tutorial!
 
 ## PiVPN - OpenVPN/WireGuard
+
+Now that Pi-hole is up and running, let’s get your VPN set up with PiVPN. You can choose between OpenVPN and WireGuard (both are solid choices, but WireGuard is like the cool kid on the block).
+
+To install PiVPN, run the following command:
+
+bash
+Copy code
+curl -L https://install.pivpn.io | bash
+Follow the prompts that appear. The installer will guide you through the setup process and will automatically detect that you’re using Pi-hole. This means it can help you configure your VPN settings to work seamlessly with your ad blocker.
+
+You’ll choose the protocol (OpenVPN or WireGuard), set up your user credentials, and pick your desired VPN settings.
+
+When prompted for the local user account, select the one you’re currently using. You’ll also be asked for a static IP or hostname for your VPN – use the static IP you set up earlier.
+
+Once everything is configured, the installer will generate the necessary configuration files. Make sure to save these somewhere safe (like your USB under your mom’s bed).
+
+
