@@ -1,5 +1,5 @@
 ## Blocklist
-### from The Big Blocklist Collection [https://firebog.net/]
+from The Big Blocklist Collection [https://firebog.net/]
 
 ### Suspicious Lists
 https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
