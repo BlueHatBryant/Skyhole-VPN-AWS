@@ -220,7 +220,6 @@ server:
     private-address: 10.0.0.0/8
     private-address: fd00::/8
     private-address: fe80::/10
-Start your local recursive server and test that it's operational:
 ```
 ```
 sudo service unbound restart
