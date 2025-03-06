@@ -290,7 +290,7 @@ sudo apt autoremove -y
 ```
 Now we will add the instance below to our crontab to handle this process of updating and rebooting our server.
 
-# runs update.sh script to update/upgrade server and refresh Pihole adblock list
+runs update.sh script to update/upgrade server and refresh Pihole adblock list
 0 6 * * * /?/update.sh
-# reboots instance
+reboots instance
 30 6 * * * /sbin/shutdown -r
