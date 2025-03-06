@@ -31,7 +31,7 @@ Under SSH key, use a new key or existing key you may already have. Be sure to ke
 If you'd like to have automatic snapshots, you can but I recommend only doing automatic snapshots ONCE everything is running perfectly and you're only coming into the VM for updates, maintenance, etc.
 
 Choose your instance plan:
-Personally, if it's just you, for 3-4 devices, you can and should be fine with doing the $3.5 a month instance. If you want some headroom, the $5 a month is good for more RAM, storage, and transfer.
+Personally, if it's just you, for 3-4 devices, you can and should be fine with doing the $5 a month instance. If you want some headroom, the $7 a month is good for more RAM, storage, and transfer.
 
 If you're going to use this for multiple people/devices exceeding 20-40. Just think if it's going to be concurrent or not and go based on CPU/Memory needs for that needed capacity.
 
@@ -85,7 +85,9 @@ Once you reconnect, rejoice as you've completed the easiest part of this tutoria
 ## Install PiHole
 
 To install Pihole, we will use this one-step automated install \
-<code>sudo curl -sSL https://install.pi-hole.net | bash </code>
+```
+sudo curl -sSL https://install.pi-hole.net | bash
+```
 
 We will press enter to "Ok" through a lot of these messages and prompts such as:
 "This installer will transform your device into a network-wide ad blocker!"
@@ -128,5 +130,6 @@ You’ll choose the protocol (OpenVPN or WireGuard), set up your user credential
 When prompted for the local user account, select the one you’re currently using. You’ll also be asked for a static IP or hostname for your VPN – use the static IP you set up earlier. 
 
 Once everything is configured, the installer will generate the necessary configuration files. Make sure to save these somewhere safe (like your USB under your mom’s bed).
+
 
 
