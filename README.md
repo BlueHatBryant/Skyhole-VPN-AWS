@@ -269,8 +269,17 @@ sudo service unbound restart
 ```
 
 ## Clean up
-Files to make to help simplify maintence:
-Create a scripts folder and within that a update.sh file
+To simplify maintenance, consider organizing your files:
+1. Organize your files:
+
+* Create a scripts folder.
+* Inside the folder, add an update.sh file.
+```
+mkdir scripts
+touch /scripts/update.sh
+nano /scripts/updates.sh
+```
+2. Add the following script to update.sh:
 ```
 #!/bin/bash
 # Update the package index
@@ -288,9 +297,16 @@ sudo apt autoclean -y
 # Remove unneeded Packages
 sudo apt autoremove -y
 ```
-Now we will add the instance below to our crontab to handle this process of updating and rebooting our server.
-
-runs update.sh script to update/upgrade server and refresh Pihole adblock list
+After saving and closing the file, we need to grant execution permission, allowing the system to run the script when called.
+```
+chmod +x scripts/update.sh
+```
+3. Automate the update process with a cron job:
+Add the following lines to your crontab (crontab -e) to schedule automatic updates and reboots:
+```
+# runs update.sh script to update/upgrade server and refresh Pihole adblock list
 0 6 * * * /?/update.sh
-reboots instance
+# reboots instance
 30 6 * * * /sbin/shutdown -r
+```
+This setup ensures your system stays updated and optimized with minimal manual effort. 🚀
