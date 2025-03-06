@@ -269,3 +269,28 @@ sudo service unbound restart
 ```
 
 ## Clean up
+Files to make to help simplify maintence:
+Create a scripts folder and within that a update.sh file
+```
+#!/bin/bash
+# Update the package index
+sudo apt-get update
+
+# Upgrade the installed packages
+sudo apt-get upgrade -y
+
+# Update Pihole and Adblock List
+sudo pihole updatePihole
+sudo pihole updateGravity
+
+# Clean APT
+sudo apt autoclean -y
+# Remove unneeded Packages
+sudo apt autoremove -y
+```
+Now we will add the instance below to our crontab to handle this process of updating and rebooting our server.
+
+# runs update.sh script to update/upgrade server and refresh Pihole adblock list
+0 6 * * * /?/update.sh
+# reboots instance
+30 6 * * * /sbin/shutdown -r
