@@ -233,16 +233,16 @@ You can test DNSSEC validation using
 dig fail01.dnssec.works @127.0.0.1 -p 5335
 dig dnssec.works @127.0.0.1 -p 5335
 ```
-The first command should give a status report of SERVFAIL and no IP address. The second should give NOERROR plus an IP address.
+The first command should give a status report of SERVFAIL and no IP address. The second should give NOERROR plus an IP address.  
 
-Configure Pi-hole
-Finally, configure Pi-hole to use your recursive DNS server by specifying 127.0.0.1#5335 as the Custom DNS (IPv4):
+Configure Pi-hole  
+Finally, configure Pi-hole to use your recursive DNS server by specifying 127.0.0.1#5335 as the Custom DNS (IPv4):  
 
-Upstream DNS Servers Configuration
+Upstream DNS Servers Configuration  
 
-(don't forget to hit Return or click on Save)
+(don't forget to hit Return or click on Save)  
 
-Disable resolvconf.conf entry for unbound (Required for Debian Bullseye+ releases)
+Disable resolvconf.conf entry for unbound (Required for Debian Bullseye+ releases)  
 Debian Bullseye+ releases auto-install a package called openresolv with a certain configuration that will cause unexpected behaviour for pihole and unbound. The effect is that the unbound-resolvconf.service instructs resolvconf to write unbound's own DNS service at nameserver 127.0.0.1 , but without the 5335 port, into the file /etc/resolv.conf. That /etc/resolv.conf file is used by local services/processes to determine DNS servers configured. You need to edit the configuration file and disable the service to work-around the misconfiguration.
 
 Step 1 - Disable the Service
