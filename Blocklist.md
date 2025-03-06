@@ -1,14 +1,12 @@
 ## Blocklist
 ### from The Big Blocklist Collection [https://firebog.net/]
 
-Suspicious Lists
-
+### Suspicious Lists
 https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
 https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts
 https://v.firebog.net/hosts/static/w3kbl.txt
 
-Advertising Lists
-
+### Advertising Lists
 https://adaway.org/hosts.txt
 https://v.firebog.net/hosts/AdguardDNS.txt
 https://v.firebog.net/hosts/Admiral.txt
@@ -18,16 +16,14 @@ https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimet
 https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts
 https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts
 
-Tracking & Telemetry Lists
-
+### Tracking & Telemetry Lists
 https://v.firebog.net/hosts/Easyprivacy.txt
 https://v.firebog.net/hosts/Prigent-Ads.txt
 https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts
 https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
 https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt
 
-Malicious Lists
-
+### Malicious Lists
 https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt
 https://v.firebog.net/hosts/Prigent-Crypto.txt
 https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts
@@ -41,8 +37,7 @@ https://raw.githubusercontent.com/AssoEchap/stalkerware-indicators/master/genera
 https://urlhaus.abuse.ch/downloads/hostfile/
 https://lists.cyberhost.uk/malware.txt
 
-Other Lists [may cause issue, use these lists with caution]
-
+### Other Lists [may cause issue, use these lists with caution]
 https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/master/lists/pi_blocklist_porn_top1m.list
 https://v.firebog.net/hosts/Prigent-Adult.txt
 https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt
